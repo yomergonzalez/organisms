@@ -1,0 +1,7 @@
+<p>Organismos!</p>
+<ul *ngIf="tree">
+  <li *ngFor="let parent of tree.getChildren()">
+      {{ parent.name }}
+      <app-node *ngIf="parent.children" [nodes]="parent.children"></app-node>
+  </li>
+</ul>
